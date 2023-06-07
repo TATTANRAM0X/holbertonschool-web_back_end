@@ -18,6 +18,9 @@ DATA = ['id', 'email', 'hashed_password', 'session_id', 'reset_token']
 class DB:
 
     def __init__(self):
+        """
+        BD class
+        """
         self._engine = create_engine("sqlite:///a.db", echo=False)
         Base.metadata.drop_all(self._engine)
         Base.metadata.create_all(self._engine)
